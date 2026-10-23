@@ -1,0 +1,160 @@
+.appContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0;
+  line-height: 1.15;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.gradientText {
+  color: #a3a3a3;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 400px;
+  margin: 0 0 0.25rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid #737373;
+  line-height: 1.5;
+}
+
+.searchPanel {
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  background: #141414;
+  border: 1px solid var(--border-subtle);
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  align-items: start;
+  gap: 1.25rem;
+}
+
+.searchColumn {
+  min-width: 0;
+}
+
+.detailsColumn {
+  min-width: 0;
+}
+
+.resultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0.75rem;
+  padding: 0.15rem 0;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.resultsBadge {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+  border: 1px solid var(--border-subtle);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.loadingResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  box-shadow: var(--shadow-card);
+}
+
+.emptyStateMessage {
+  padding: 2rem 1rem;
+  text-align: left;
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  color: var(--text-muted);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s;
+}
+
+.loadingMark {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #525252;
+  border-top-color: #f5f5f5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 860px) {
+  .appContainer {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .subtitle {
+    margin: 0;
+  }
+
+  .mainLayout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .searchPanel {
+    padding: 0.65rem;
+  }
+}

@@ -1,0 +1,115 @@
+.resultSetWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.emptyState {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.85rem;
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  box-shadow: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.resultItem:hover {
+  background-color: #191919;
+  border-color: #525252;
+}
+
+.selectedItem {
+  border-color: #f5f5f5;
+  background-color: #1a1a1a;
+}
+
+.userInfoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: 1px solid #404040;
+  background-color: #262626;
+}
+
+.loginName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-main);
+  letter-spacing: 0;
+}
+
+.userType {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: capitalize;
+  margin-top: 0.1rem;
+}
+
+.detailsButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.95rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  background-color: #1a1a1a;
+  border: 1px solid #525252;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.detailsButton:hover {
+  background-color: #333333;
+  border-color: #a3a3a3;
+}
+
+.detailsButton:active {
+  background-color: #404040;
+}
+
+@media (max-width: 520px) {
+  .resultItem {
+    gap: 0.5rem;
+    padding: 0.65rem;
+  }
+
+  .userInfoContainer {
+    gap: 0.6rem;
+    min-width: 0;
+  }
+
+  .loginName {
+    overflow-wrap: anywhere;
+  }
+
+  .detailsButton {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.78rem;
+  }
+}

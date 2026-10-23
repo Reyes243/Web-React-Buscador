@@ -1,0 +1,64 @@
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+
+  --primary-50: #262626;
+  --primary-100: #333333;
+  --primary-200: #525252;
+  --primary-500: #d4d4d4;
+  --primary-600: #e5e5e5;
+  --primary-700: #f5f5f5;
+  --primary-gradient: #f5f5f5;
+  --accent-glow: rgba(255, 255, 255, 0.12);
+
+  --bg-main: #0a0a0a;
+  --bg-gradient: #0a0a0a;
+  --surface-card: #111111;
+  --surface-hover: #1a1a1a;
+  --surface-active: #262626;
+
+  --text-main: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --text-light: #737373;
+
+  --border-subtle: #303030;
+  --border-focus: #f5f5f5;
+  --shadow-sm: none;
+  --shadow-card: none;
+  --shadow-hover: none;
+  --shadow-button: none;
+
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-gradient);
+  background-attachment: scroll;
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
