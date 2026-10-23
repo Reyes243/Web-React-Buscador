@@ -93,6 +93,12 @@
   background-color: #404040;
 }
 
+.eyeIcon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
 @media (max-width: 520px) {
   .resultItem {
     gap: 0.5rem;
